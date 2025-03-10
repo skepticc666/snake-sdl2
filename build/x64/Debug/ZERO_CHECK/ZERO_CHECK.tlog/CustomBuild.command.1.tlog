@@ -1,0 +1,10 @@
+^C:\PROGRAMMING\C++\SNAKE SDL2\BUILD\CMAKEFILES\749DE4B25246C1E8A6276A67A463DD96\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Programming/C++/snake sdl2" "-BC:/Programming/C++/snake sdl2/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Programming/C++/snake sdl2/build/sfjdhsf.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

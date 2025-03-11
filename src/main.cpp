@@ -90,9 +90,9 @@ int main()
         else if(snake[0].y < 0){
             snake[0].y = height;
         }
-        // else(snake[0].y + snake[0].h > height){
-        //     snake[0].y = 0 - snake[0].h ;
-        // }
+        else if(snake[0].y + snake[0].h > height){
+            snake[0].y = 0 - snake[0].h ;
+        }
 
 
 

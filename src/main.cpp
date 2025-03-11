@@ -138,7 +138,7 @@ int main()
         SDL_SetRenderDrawColor(render, 0, 0, 0, 255);
         SDL_RenderClear(render);
 
-        for (int i = total - 1; i >= 0; i--)
+        for (int i = total - 1; i >= 0; i--) //old value stays
         {
 
             snake[i].w = grid;

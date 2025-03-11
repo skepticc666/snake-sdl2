@@ -32,6 +32,7 @@ int main()
 
 
 
+
     SDL_Rect food;
     food.x = (rand() % pl_x) * grid;
     food.y = (rand() % pl_y) * grid;
@@ -74,9 +75,10 @@ int main()
 
         snake[0].x +=  snake_dirx*grid;
         snake[0].y += snake_diry*grid ;
-        SDL_Delay(300);
+        
 
         if(snake[0].x == food.x && snake[0].y == food.y){
+            total++ ;
             food.x = (rand() % pl_x) * grid;
             food.y = (rand() % pl_y) * grid;
         }
@@ -96,26 +98,7 @@ int main()
 
 
 
-        // for(int i =0 ; i < total ; i ++){
-            
-            
-
-        //     if(i == 0){
-        //         snake[i].w = grid;
-        //         snake[i].h = grid;
-        //         snake[i].x +=  snake_dirx*grid;
-        //         snake[i].y += snake_diry*grid ;
-        //         SDL_SetRenderDrawColor(render , 255 , 255 ,255 ,255);
-        //         SDL_RenderFillRect(render , &snake[i]);
-        //     }
-            // else{
-            //     snake[i].x = snake[i - 1].x + snake[i].w*snake_dirx ;
-            //     snake[i].y = snake[ i - 1 ].y + snake[i].h*snake_diry ;
-            //     SDL_SetRenderDrawColor(render , 10 , 255 ,255 ,255);
-            //     SDL_RenderFillRect(render , &snake[i]);
-            // }
-            
-        //}
+        
 
 
 
@@ -126,10 +109,38 @@ int main()
         SDL_SetRenderDrawColor(render, 0, 0, 0, 255);
         SDL_RenderClear(render);
 
+        // for(int i =0 ; i < total ; i ++){
+
+        //     snake[i].w  = grid;
+        //     snake[i].h  = grid;
+
+        //     if(i == 0){
+                
+        //         snake[i].x +=  snake_dirx*grid;
+        //         snake[i].y += snake_diry*grid ;
+        //         SDL_SetRenderDrawColor(render , 10 , 255 ,255 ,255);
+        //         SDL_RenderFillRect(render , &snake[i]);
+        //     }
+        //     else{
+        //         // snake[i].x =  snake_dirx*grid;
+        //         // snake[i].y = snake_diry*grid ;
+        //         snake[i].x += snake[i - 1].x + snake[i].w*snake_dirx*grid ;
+        //         snake[i].y += snake[ i - 1 ].y + snake[i].h*snake_diry*grid ;
+        //         SDL_SetRenderDrawColor(render , 255 , 255 ,255 ,255);
+        //         SDL_RenderFillRect(render , &snake[i]);
+        //     }
+            
+        // }
+        // SDL_Delay(350);
 
 
+        // SDL_SetRenderDrawColor(render , 10 , 255 ,255 ,255);
+        // SDL_RenderFillRect(render , &snake[0]);
+
+            
         SDL_SetRenderDrawColor(render , 10 , 255 ,255 ,255);
         SDL_RenderFillRect(render , &snake[0]);
+        SDL_Delay(300);
 
 
 

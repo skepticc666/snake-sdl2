@@ -14,7 +14,7 @@ int main()
     SDL_Renderer *render = SDL_CreateRenderer(window, -1, 0);
     SDL_Init(SDL_INIT_VIDEO);
     SDL_Event e;
-    bool running = true;
+    bool is_running = true;
 
     int grid = 50;
 
@@ -35,13 +35,13 @@ int main()
     food.w = 50;
     food.h = 50;
 
-    while (running)
+    while (is_running)
     {
         while (SDL_PollEvent(&e))
         {
             if (e.type == SDL_QUIT)
             {
-                running = false;
+                is_running = false;
             }
             if (e.type == SDL_KEYDOWN)
             {

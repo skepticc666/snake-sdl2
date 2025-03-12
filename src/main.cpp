@@ -7,7 +7,9 @@
 #include <SDL_image.h>
 
 int main() {
+
     snake123 qwert;
     qwert.windowInnit();
     qwert.gameLoop();
+
 }
